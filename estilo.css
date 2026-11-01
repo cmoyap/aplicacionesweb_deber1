@@ -12,9 +12,9 @@ body {
 }
 
 .contenedor {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 1rem;
+  padding: 1rem;
   width: 100%;
   flex: 1;
 }
@@ -52,10 +52,6 @@ body {
   margin-bottom: 1rem; 
   font-size: 1.8rem; 
 }
-
-.info ul { list-style: none; padding-left: 0; }
-.info li { padding: 0.4rem 0; border-bottom: 1px dashed #ccc; }
-.info strong { color: #667eea; }
 
 /* Estilos de la Calculadora de Botones */
 .screen-input { 
@@ -144,4 +140,89 @@ footer {
   color: white;
   opacity: 0.9;
   font-size: 0.9rem;
+}
+.presentacion{
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.tarjetas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.tarjeta{
+    background:#f8f9ff;
+    padding:25px;
+    border-radius:18px;
+    border-left:6px solid #667eea;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:all .3s ease;
+}
+
+.tarjeta:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.tarjeta h3{
+    color:#764ba2;
+    margin-bottom:12px;
+}
+
+.tarjeta p{
+    margin:0;
+    color:#555;
+    line-height:1.7;
+}
+
+.tarjeta:nth-child(1){border-left-color:#6c5ce7;}
+.tarjeta:nth-child(2){border-left-color:#0984e3;}
+.tarjeta:nth-child(3){border-left-color:#00b894;}
+.tarjeta:nth-child(4){border-left-color:#fdcb6e;}
+.tarjeta:nth-child(5){border-left-color:#e17055;}
+.tarjeta:nth-child(6){border-left-color:#d63031;}
+
+.presentacion-card{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:linear-gradient(135deg,#f8f9ff,#eef1ff);
+    padding:25px;
+    border-radius:20px;
+    margin:30px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-left:6px solid #667eea;
+}
+
+.icono{
+    font-size:4rem;
+    background:white;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.texto-presentacion h3{
+    color:#764ba2;
+    margin-bottom:10px;
+    font-size:1.5rem;
+}
+
+.texto-presentacion p{
+    margin:0;
+    line-height:1.7;
+    color:#555;
+}
+
+@media (max-width:768px){
+    .presentacion-card{
+        flex-direction:column;
+        text-align:center;
+    }
 }

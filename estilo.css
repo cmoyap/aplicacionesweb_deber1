@@ -1,0 +1,147 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  width: 100%;
+  flex: 1;
+}
+
+.hero {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
+.hero h1 span { color: #ffeaa7; }
+.hero p { font-size: 1.25rem; opacity: 0.95; }
+
+.info, .calculadora-seccion {
+  background: white;
+  padding: 2rem;
+  margin: 0.5rem 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.calculadora-seccion {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info h2, .calculadora-seccion h2 { 
+  text-align: center; 
+  color: #764ba2; 
+  margin-bottom: 1rem; 
+  font-size: 1.8rem; 
+}
+
+.info ul { list-style: none; padding-left: 0; }
+.info li { padding: 0.4rem 0; border-bottom: 1px dashed #ccc; }
+.info strong { color: #667eea; }
+
+/* Estilos de la Calculadora de Botones */
+.screen-input { 
+  width: 100%; 
+  padding: 1rem; 
+  margin-bottom: 1rem; 
+  border: 2px solid #e0e0e0; 
+  border-radius: 12px; 
+  font-size: 1.6rem; 
+  text-align: right;
+  background: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  outline: none;
+}
+
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+.btn { 
+  padding: 1rem 0; 
+  background: #f0f2f5; 
+  color: #333; 
+  border: none; 
+  border-radius: 10px; 
+  font-size: 1.2rem; 
+  font-weight: 600;
+  cursor: pointer; 
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover { 
+  background: #e4e6eb; 
+  transform: translateY(-2px); 
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-op { 
+  background: #667eea; 
+  color: white; 
+}
+.btn-op:hover { 
+  background: #5a6fd6; 
+}
+
+.btn-action { 
+  background: #e17055; 
+  color: white; 
+}
+.btn-action:hover { 
+  background: #d63031; 
+}
+
+.btn-equal { 
+  grid-column: span 2; 
+  background: linear-gradient(135deg, #667eea, #764ba2); 
+  color: white; 
+}
+.btn-equal:hover { 
+  opacity: 0.95; 
+}
+
+.resultado-error { 
+  margin-top: 1rem; 
+  padding: 0.8rem; 
+  background: #ffeaea; 
+  border-left: 5px solid #d63031; 
+  border-radius: 8px; 
+  font-size: 0.95rem; 
+  color: #d63031; 
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
